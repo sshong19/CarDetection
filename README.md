@@ -52,3 +52,8 @@
 `cd ./CarDetection/motion_detection`
 #### 2) Run the python script
 `python3 cv_motion_detector.py`
+
+
+## Contribution
+* Priyal: research and implement different detection algorithms, implement and optimize yolov3 algorithm
+* Soon: installed Rasbian Stretch Lite, configured RPI, optimize yolov3 for RPI, attempted motion detection
