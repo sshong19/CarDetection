@@ -6,19 +6,27 @@
   * numpy
  
  ## Configuration
- # Clone the repository on the raspberry pi
+ ### To start the script manually
+ #### Clone the repository on the raspberry pi
  `git clone https://github.com/sshong19/CarDetection.git`
  If your raspberry pi doesn't have git installed, you can use scp or smtp to transfer files from your local machine to raspberry pi
  
- # Move to the project directory
+ #### Move to the project directory
  `cd ./CarDetection/yolo_detection`
  
- # Install necessary dependencies in Python 3.5
+ #### Install necessary dependencies in Python 3.5
  `pip3 install -r requirements.txt `
  
- # Run the python script
+ #### Run the python script
  `$ python3 yolo_opencv.py --config yolov3-tiny.cfg --weights yolov3-tiny.weights --classes yolov3.txt`
  
+ ### To start the script on boot
+ 
+ #### Edit `rc.local` file 
+ `sudo nano /etc/rc.local`
+ 
+ #### Copy the script below just above the exit 0 code
+ `/home/pi/yolo_detection/startup.sh`
  
  ### sample output image :
  ![](object-detection.jpg)
@@ -38,7 +46,5 @@
  cars: 3 trucks: 0 bikes: 0 time: 2018-09-20 16:33:45.944274
  cars: 4 trucks: 0 bikes: 0 time: 2018-09-20 16:34:15.841824
  ```
- 
- 
  
  (**SSD and Faster R-CNN examples will be added soon**)
