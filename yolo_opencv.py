@@ -54,7 +54,7 @@ try:
 	while True:
                 #Take the image with specified resolution
 		image = takeMotionImage(640, 480, camera)
-		filename = datetime.datetime.now().strftime("%M%S.%f_") + ".jpg"
+		filename = "output/"+datetime.datetime.now().strftime("%M%S.%f_") + ".jpg"
 		cv2.imwrite(filename, image)
 		tic = time.time()
 		#Preparing the input image to run through the deep neural network
@@ -80,7 +80,7 @@ try:
 		toc = time.time()
 
                 #Open a file that will constant append data to
-		f = open("cardata.txt", "a+")
+		f = open("output/cardata.txt", "a+")
 		f.write("cars: " + str(class_ids.count(2)) + " trucks: " + str(class_ids.count(7)) + " bikes: "+ str(class_ids.count(1)) + " time: " + str(datetime.datetime.now()) + "\n")
 		f.close()
 		print("Number of cars: " + str(class_ids.count(2)))
