@@ -1,4 +1,4 @@
-# Car detection using deep learning with OpenCV and Python 
+# Car detection with OpenCV and Python 
 
  ## Dependencies
   * opencv-python==3.4.2.17
@@ -12,7 +12,7 @@
  If your raspberry pi doesn't have git installed, you can use scp or smtp to transfer files from your local machine to raspberry pi
  
  #### 2) Move to the project directory
- `cd ./CarDetection`
+ `cd ./CarDetection/dnn_detection`
  
  #### 3) Install necessary dependencies in Python 3.5
  `pip3 install -r requirements.txt `
@@ -46,3 +46,9 @@
  cars: 3 trucks: 0 bikes: 0 time: 2018-09-20 16:33:45.944274
  cars: 4 trucks: 0 bikes: 0 time: 2018-09-20 16:34:15.841824
  ```
+
+## [Optional] Motion Detection
+#### 1) Move to the motion detection directory 
+`cd ./CarDetection/motion_detection`
+#### 2) Run the python script
+`python3 cv_motion_detector.py`
