@@ -15,7 +15,7 @@
  `cd ./CarDetection/dnn_detection`
  
  #### 3) Install necessary dependencies in Python 3.5
- `pip3 install -r requirements.txt `
+ `pip3 install -r ../requirements.txt `
  
  #### 4) Run the python script
  `$ python3 yolo_opencv.py --config yolov3-tiny.cfg --weights yolov3-tiny.weights --classes yolov3.txt`
